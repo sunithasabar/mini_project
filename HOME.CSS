@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+ font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35,85);
+}
+
+span{
+    font-size: .9rem;
+    color: #ffffff;
+    
+}
+
+h6{
+    font-size: 1.1rem;
+    color: rgb(24,24,49);
+}
+/* Styling the navigation bar */
+nav {
+  background-color: white; /* Set the background color to white */
+  color: darkblue; /* Set the text color to dark blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed; /* Fix the navigation bar at the top of the viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Ensure it is above other elements */
+  border-radius: 10px; /* Add rounded border to the navigation bar */
+}
+
+/* Styling the logo */
+nav img {
+  margin-left: 1rem;
+  height: 7rem; /* Adjust the height of the logo as needed */
+}
+
+/* Styling the navigation links */
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navigation h6{
+  background-color: #ffffff;
+  border-radius: 1rem;
+  
+}
+/* Define the styles for the "Call Now" link */
+.contact-link {
+  color: #fbfbfb;
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allow for inline-block elements to be animated */
+  position: relative; /* Position for pseudo-element */
+  animation: moveText 2s linear infinite; 
+  background: #050f51;/* Apply the animation continuously */
+}
+
+/* Define the animation for the "Call Now" link */
+@keyframes moveText {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(3px); 
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+
+.navigation li {
+  margin-right: 10px; /* Adjust the spacing between navigation items */
+}
+
+.navigation li:last-child {
+  margin-right: 0; /* Remove margin for the last item to prevent extra spacing */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: darkblue; /* Set the text color for navigation links */
+  font-size: 10px; /* Set the font size as needed */
+  padding: 5px 10px; /* Add padding to the navigation links */
+  border-radius: 10px; /* Add rounded border to the links */
+}
+
+/* Styling the navigation link on hover */
+.navigation h6:hover {
+  background-color: skyblue; /* Set the background color to sky blue on hover */
+}
+
+.main {
+  padding: 1rem;
+  text-align: center;
+}
+
+.main .heading {
+  font-size: 3rem;
+  color: rgb(8, 16, 64);
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 51, 153, 0.05);
+}
+
+.main.rows {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.main .rows .video-container {
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.main .rows .video-container video {
+  
+  margin-top: 10rem;
+  width: 100%;
+  border: 1rem solid #ffffff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+  height: 100%;
+  object-fit: cover;
+}
+
+.main .rows .content {
+  flex: 1 1 40rem;
+  text-align: left;
+}
+
+.main .rows .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.main .rows .content p {
+  font-size: 1.5rem;
+  color: #6c6c6c;
+  padding: 5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.main .rows .content .btn {
+  display: inline-block;
+  background-color: rgb(58, 44, 129);
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.main .rows .content .btn:hover {
+  background-color: rgb(10, 55, 79);
+}
+
+/* Styling the phone icon and "CALL NOW" link */
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black; /* Set the text color for the link */
+  font-weight: bold; /* Highlight the "CALL NOW" link with bold text */
+}
+
+.contact-link img {
+  height: 20px; /* Adjust the height of the phone icon */
+  margin-right: 5px; /* Add some spacing between the icon and text */
+}
+.contact-link{
+    display: flex;
+    align-items: center;
+}
+.contact-link img{
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+}
+.contact-text{
+    font-size: large;
+    font-weight: bold;
+    transition: 0.2 ease;
+}
+.contact-text:hover{
+    color: blue;
+}
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+  .home {
+      padding-top: 40px; /* Adjust the top padding for better spacing on smaller screens */
+  }
+
+  .home p {
+      width: 95%;
+      font-size: 18px;
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center; /* To center the text */
+  color: 
+  rgb(8, 16, 58); /* Setting the text color to dark blue */
+}
+
+/* Styling the category-box container */
+.category-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling individual category containers */
+.categorys {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color:  #8ba8d4; /* Sky blue color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling the image inside category containers */
+.categorys img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Styling the details section inside category containers */
+.details {
+  margin-top: 10px;
+}
+
+/* Styling the button inside category containers */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: rgb(56, 56, 168);
+  color: #eeeded;
+  padding: 10px 20px; /* Adjust the padding for better button size */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+    animation: pulseAnimation 2s infinite;
+}
+
+/* Styling the button on hover */
+.btn:hover {
+  background-color: rgb(8, 8, 62); /* Dark blue color on hover */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+  .category-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+#features{
+  padding: 5vw 8vw 0 8vw;
+  text-align: center;
+}
+#features .fea-base{
+  padding: 10px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  grid-gap: 1rem;
+  margin-top: 60px;
+}
+
+#features .fea-box {
+  background: #d1d1e4;
+  text-align: start;
+}
+#features .fea-box i{
+  margin-left: 1rem;
+  font-size: 2.3rem;
+  color: rgb(35, 35,85);
+}
+#features .fea-box h3{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(8, 16, 64);
+  padding: 13px 0 7px 0;
+}
+#features .fea-box p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.885);
+  padding: 13px 0 7px 0;
+}
+
+.about {
+  padding: 1rem;
+  text-align: center;
+}
+
+.about .heading {
+  font-size: 3rem;
+  color: rgb(8, 16, 64);
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 51, 153, 0.05);
+}
+
+.about .rows {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.about .rows .video-container {
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.about .rows .video-container video {
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.6);
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .rows .content {
+  flex: 1 1 40rem;
+  text-align: left;
+}
+
+.about .rows .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.about .rows .content p {
+  font-size: 1.5rem;
+  color: #6c6c6c;
+  padding: 5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.about .rows .content .btn {
+  display: inline-block;
+  background-color: rgb(58, 44, 129);
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.about .rows .content .btn:hover {
+  background-color: rgb(10, 55, 79);
+}
+/* Footer styles */
+.footer {
+  margin: 2rem;
+  background-color: #93959a75;
+  color: #061a41;
+  padding: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info, .social-links {
+  flex: 1 1 50%;
+}
+
+.contact-info h3, .social-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.icon-link {
+  font-size: 1.5rem;
+  color: #080d3b;
+  margin-right: 1rem;
+}
+
+.footer-line {
+  border-top: 1px solid #555;
+  margin: 2rem 0;
+}
+
+.created-by {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.created-by p {
+  margin: 0.5rem;
+}
+/* Contact Us section styles */
+.contact-us {
+  margin: 4rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #8299bb; /* Light blue background */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.contact-us h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+button#contactUsBtn {
+  background-color: rgb(112, 186, 226);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#contactUsBtn:hover {
+  background-color: rgb(12, 4, 49);
+}
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333; /* Set default text color */
+  background-color: #fff; /* White background color */
+}
+
+/* Header styles */
+header {
+  background-color: #91b1d8; /* Dark blue background color */
+  color: #fff; /* White text color */
+  text-align: center;
+  display: flex;
+  padding: 20px;
+}
+
+/* Main container styles */
+.container {
+  padding: 20px;
+}
+
+/* Company info styles */
+.company-info h2 {
+  font-size: 35px;
+  color: #070326;
+}
+
+.company-info p {
+  font-size: 25px;
+}
+
+/* Why Choose Us section styles */
+.why-choose-us h1 {
+  font-size: 45px;
+  text-align: center;
+  font-style: italic;
+  color: #1b3b62; /* Dark blue color for the title */
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reason {
+  padding: 30px;
+  border: 1px solid #1b3b62; /* Dark blue border */
+  background-color: #f2f2f2; /* Light gray background */
+  border-radius: 10px;
+}
+
+.reason h3 {
+  font-size: 25px;
+  color: #1b3b62; /* Dark blue color for the heading */
+}
+
+.reason p {
+  font-size: 19px;
+}
+
+/* Footer styles */
+.footers {
+  margin: 2rem;
+  background-color: #b4cae6; /* Dark blue background color */
+  color: #0c0b40; /* White text color */
+  padding: 2rem;
+}
+
+/* Footer content styles */
+.footer-contents {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-infos {
+  flex: 1 1 50%;
+  font-size: 30px;
+  align-items: center;
+}
+
+.contact-info h3,
+.social-link h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+}
+
+.footer-lines {
+  border-top: 1px solid #fff; /* White border for the separator line */
+  margin: 2rem 0;
+}
+
+.created-byy {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.created-byy p {
+  margin: 0.5rem;
+}
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 767px) {
+  .reasons {
+    grid-template-columns:  1fr 1fr 1fr 1fr; /* Single column layout on mobile */
+  }
+
+  /* Center align footer contents on mobile */
+  .footer-contents {
+    text-align: center;
+  }
+
+  /* Adjust font size for phone */
+  .company-info h2 {
+    font-size: 28px;
+  }
+
+  .company-info p {
+    font-size: 22px;
+  }
+
+  .why-choose-us h1 {
+    font-size: 40px;
+  }
+
+  .reason h3 {
+    font-size: 22px;
+  }
+
+  .reason p {
+    font-size: 16px;
+  }
+
+  .contact-infos {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+
+/*service*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #6090c3;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+
+  html {
+      font-size: 55%;
+  }
+
+  header {
+      padding: 1.5rem;
+  }
+
+  section {
+      padding: 1.5rem;
+  }
+
+  .home .content h3 {
+      font-size: 5rem;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  header {
+      flex-flow: column;
+  }
+
+  header form {
+      width: 100%;
+      margin: 2rem 0;
+  }
+
+  header.active {
+      transform: translateY(-12.5rem);
+  }
+
+  .home .content {
+      text-align: center;
+  }
+
+  .home .image img {
+      width: 100%;
+  }
+
+}
+
+@media (max-width:450px) {
+
+  html {
+      font-size: 50%;
+  }
+
+  .heading {
+      text-align: center;
+      font-size: 2.5rem;
+      border-bottom: none;
+  }
+
+}
+.call-button {
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem; 
+  font-style:bold;
+  background-color: #1d0e51;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* Smaller border radius for a less rounded look */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  animation: pulseAnimation 2s infinite;
+}
+
+.call-button:hover {
+  background-color: #090e4a;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

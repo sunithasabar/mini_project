@@ -1,0 +1,384 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color:  rgb(92, 155, 73);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.feature {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px  rgb(92, 155, 73);
+}
+
+.animation {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+/* Style for the call section */
+section {
+    text-align: center;
+    padding: 20px;
+}
+/* CSS for the small section */
+.washing-machine-section {
+    padding: 20px;
+    color:  #ffffff;
+    text-align: center;
+    position: relative; /* Add position relative for animation */
+    overflow: hidden; /* Hide overflowing text for animation */
+}
+
+.washing-machine-text {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Keyframes for automatic background color change */
+@keyframes backgroundColorChange {
+    0%, 100% {
+        background-color:  rgb(92, 155, 73); /* Start and end with dark blue */
+    }
+    25% {
+        background-color:  rgb(92, 155, 73); /* Change to a different color at 25% */
+    }
+    50% {
+        background-color:  rgb(92, 155, 73); /* Change to a different color at 50% */
+    }
+    75% {
+        background-color:  rgb(92, 155, 73); /* Change to a different color at 75% */
+    }
+}
+
+/* Apply the animation to the section */
+.washing-machine-section {
+    animation: backgroundColorChange 8s linear infinite; /* 8 seconds duration for the animation, infinite loop */
+}
+
+/* Additional styling for the text color (white) */
+.washing-machine-text span {
+    color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .washing-machine-text {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+.call-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #608d6e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    animation: pulseAnimation 2s infinite;
+}
+
+.call-button:hover {
+    background-color:  rgb(92, 155, 73);
+    transform: scale(1.05);
+}
+
+.call-button.clicked {
+    background-color:  rgb(92, 155, 73);
+    color: #f5f5f5;
+}
+
+.call-button.clicked:hover {
+    background-color:  rgb(92, 155, 73);
+}
+
+@keyframes pulseAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }}
+/* Animation keyframes */
+
+
+.discount {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.discount-percentage {
+    font-size: 1.8rem;
+    color:   rgb(92, 155, 73);
+}
+
+.reviews {
+    background-color: #f7f7f7;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
+
+.services {
+    background-color:  rgb(92, 155, 73);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.service {
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color:  #608d6e;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.contact {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #b4cae6;
+    color:  #39c473;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact a {
+    color: #f1f0f5;
+    background-color: #608d6e;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+    color:  rgb(92, 155, 73);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .features {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .feature {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .animation {
+        padding: 1rem;
+    }
+
+    .discount, .reviews, .services, .contact {
+        padding: 2rem;
+    }
+
+    .discount-percentage {
+        font-size: 1.5rem;
+    }
+
+    .review {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .service {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+.animation-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.animation-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-us {
+    text-align: center;
+    padding: 4rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="tel"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid  rgb(92, 155, 73);
+    border-radius: 8px;
+  
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color:  #81cc91;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color:  rgb(92, 155, 73);
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-us {
+        padding: 2rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    button[type="submit"] {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* footer */
+.footer {
+    background-color: #f0f0f0; /* Grey background */
+    color:   rgb(92, 155, 73); /* Dark blue text color */
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info, .social-links {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon-link {
+    margin: 0 10px;
+    color:   rgb(92, 155, 73); /* Dark blue icon color */
+    font-size: 24px;
+  }
+  
+  .created-by {
+    text-align: center;
+  }
+  
+  .footer-line {
+    border: 1px solid   rgb(92, 155, 73); /* Dark blue border line */
+    margin: 20px 0;
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .contact-info, .social-links {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  
+    .social-icons {
+      justify-content: flex-end;
+    }
+  
+    .icon-link {
+      color:  rgb(92, 155, 73); /* Dark blue icon color */
+    }
+  
+    .created-by {
+      text-align: right;
+    }
+  }
+  
